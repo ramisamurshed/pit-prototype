@@ -28,9 +28,13 @@ function create_events() {
 		card_text.append(upcoming_event["time"])
 		card_text.append("<p>")
 		card_text.append(upcoming_event["location"])
-
 		var card_btn = $("<button type='button'>Expand</button>")
 		card_btn.addClass("btn btn-primary")
+		
+		card_btn.click(function(){
+			console.log("button clicked new!")
+			window.location.href = "/event_selected"
+	  	})
 
 		card_body.append(card_title)
 		card_body.append(card_text)
