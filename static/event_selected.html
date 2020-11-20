@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'event_selected.js') }}"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="shortcut icon" href="#" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+		<script>
+			var upcoming_events = {{upcoming_events|tojson}}
+			var people = {{people|tojson}}
+		</script>
+
+		<style>
+			body {
+				padding: 30px;
+			}
+			.container {
+				margin-top: 100px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="header">
+			<h1>Queens Public Library</h1>
+			<h2>Culture Bridge Platform</h2>
+		</div>
+		<div class="container">
+			<div class="row" id="back-to-events">
+			</div>
+			<div class="row">
+				<h1> 
+					<div id = "event-name"> </div> 
+				</h1>
+			</div>
+			<div class="row" id="join_event">
+			</div>
+			<br>
+			<div class="row" id="event-info">
+
+			</div>
+			<div class="row" id="join">
+			</div>
+			<br>
+			<div class="row">
+				<h4>Help Available:</h4>
+			</div>
+			<div class="row" id="help-available">
+			</div>
+			<div class="row">
+				<h4>People Attending:</h4>
+			</div>
+			<div class="row" id="tandem-selection">
+				
+			</div>
+			<div class="row" id="people-attending">
+				
+			</div>
+		</div>
+	</body>
+</html>
