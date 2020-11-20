@@ -6,31 +6,31 @@ app = Flask(__name__)
 upcoming_events = [
 	{
 	"id": 1,
-	"name": "Salsa Lessons",
-	"date": "Monday, November 16",
-	"time": "7PM",
-	"location": "Library Hall"
+	"name": "Culture Connection: Strive From Within: The Jazzmeia Horn Approach",
+	"date": "Nov 20, 7:00pm - 8:30pm",
+	"location": "Virtual",
+	"description": "Jazzmeia Horn has been one of jazz music’s rising stars in the past several years, selling out the most illustrious jazz venues around the world including the Appel Room in Jazz at Lincoln Center and The Kennedy Center in Washington D.C. Ms. Horn will be talking about her new book Strive From Within: The Jazzmeia Horn Approach, performing several musical numbers, and taking questions from our audience. Watch live on our Facebook page, htttps://www.facebook.com/QPLNYC."
 	},
 	{
 	"id": 2,
-	"name": "Sushi Cooking Class",
-	"date": "Friday, November 20",
-	"time": "11AM",
-	"location": "Local Restaurant"
+	"name": "QPL English Language Conversation Practice Session: Thanksgiving and Party Planning",
+	"date": "Nov 21, 11:00am - 12:00pm",
+	"location": "Virtual",
+	"description": "Join us at our ESOL Adult Conversation Group, where we will practice our conversational English skills and socialize with our peers! This program will be happening every Saturday at 11am. Go to https://queenslib.org/2Iqi7j7 and register."
 	},
 	{
 	"id": 3,
-	"name": "Pottery Workshop",
-	"date": "Wednesday, November 24",
-	"time": "7PM",
-	"location": "Library Room 14"
+	"name": "Chinese Music Appreciation: Erhu (Fiddle) with Yue Yang and Ba Ban Chinese Music Society",
+	"date": "Nov 21, 4:00pm - 5:00pm",
+	"location": "Virtual",
+	"description": "Through demonstration of a variety of Chinese fiddles by Yue Yang and Zhou Yi, this workshop covers music history while enhancing understanding of the background of a famous repertoire. Watch live on Facebook: https://www.facebook.com/QPLNYC"
 	},
 	{
 	"id": 4,
-	"name": "Salsa Lessons",
-	"date": "Wednesday, November 24",
-	"time": "8PM",
-	"location": "Flushing Meadows Park"
+	"name": "Gabriel Guerrero: Jazz Piano",
+	"date": "Nov 23, 4:00pm - 5:00pm",
+	"location": "Virtual",
+	"description": "Born in Colombia and based in New York City, Gabriel Guerrero draws his inspiration from South American rhythms and contemporary improvisation, and from the avant garde to the traditions of be-bop and jazz. He began his classical training at age five and made TV appearances at age nine. Tune in on Instagram Live, https://www.instagram.com/QPLNYC."
 	}
 ]
 
