@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 		<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
 		<script>
 			var upcoming_events = {{upcoming_events|tojson}}
@@ -21,13 +23,18 @@
 			.container {
 				margin-top: 100px;
 			}
+			.cbp {
+				text-transform: uppercase;
+				margin-left: 50px;
+				font-family: 'Roboto Condensed', sans-serif;
+			}
 		</style>
 
 	</head>
 	<body>
 		<div class="header">
-			<h1>Queens Public Library</h1>
-			<h2>Culture Bridge Platform</h2>
+			<img src="https://www.queenslibrary.org/themes/renovate/logo.svg" alt="Queens Public Library">
+			<h4 class="cbp">Culture Bridge Platform</h4>
 		</div>
 		<div class="container">
 			<div class="row" id="back-to-events">
