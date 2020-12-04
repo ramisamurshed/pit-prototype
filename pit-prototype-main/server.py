@@ -12,6 +12,7 @@ upcoming_events = [
 	"location": "Virtual",
 	"description": "Jazzmeia Horn has been one of jazz music’s rising stars in the past several years, selling out the most illustrious jazz venues around the world including the Appel Room in Jazz at Lincoln Center and The Kennedy Center in Washington D.C. Ms. Horn will be talking about her new book Strive From Within: The Jazzmeia Horn Approach, performing several musical numbers, and taking questions from our audience. Watch live on our Facebook page, htttps://www.facebook.com/QPLNYC.",
 	"help_offered": ["Filling forms in English", " Legal advice"],
+	"help_people": {"Filling forms in English":[{"pid": 1,"name": "Ron","available": "After Event","language": "Mandarin"}, {"pid": 2,"name": "Harry","available": "Before Event","language": "Spanish"}], " Legal advice": [{"pid": 3,"name": "Hermionie","available": "After Event","language": "Mandarin"}]},
 	"languages_spoken": ["Spanish", " English", " Korean"],
 	},
 	{
@@ -21,7 +22,8 @@ upcoming_events = [
 	"date": "Nov 21, 11:00am - 12:00pm",
 	"location": "Virtual",
 	"description": "Join us at our ESOL Adult Conversation Group, where we will practice our conversational English skills and socialize with our peers! This program will be happening every Saturday at 11am. Go to https://queenslib.org/2Iqi7j7 and register.",
-	"help_offered": ["English-Chinese Translation", " Chinese Conversation "],
+	"help_offered": ["Chinese Translation", " Chinese Conversation"],
+	"help_people": {"Chinese Translation":[{"pid": 1,"name": "Rupal","available": "After Event","language": "Mandarin"}, {"pid": 2,"name": "Ramisa","available": "Before Event","language": "Spanish"}], " Chinese Conversation": [{"pid": 3,"name": "Laura","available": "After Event","language": "Mandarin"}]},
 	"languages_spoken": ["Mandarin", " Spanish", " English"],
 	},
 	{
@@ -32,6 +34,7 @@ upcoming_events = [
 	"location": "Virtual",
 	"description": "Through demonstration of a variety of Chinese fiddles by Yue Yang and Zhou Yi, this workshop covers music history while enhancing understanding of the background of a famous repertoire. Watch live on Facebook: https://www.facebook.com/QPLNYC",
 	"help_offered": ["English Conversation", " Reading help"],
+	"help_people": {"English Conversation":[{"pid": 1,"name": "Andrea","available": "After Event","language": "Mandarin"}, {"pid": 2,"name": "Paul","available": "Before Event","language": "Spanish"}], " Reading help": [{"pid": 3,"name": "Lydia","available": "After Event","language": "Mandarin"}]},
 	"languages_spoken": ["Mandarin", " Korean", " Yiddish "],
 	},
 	{
@@ -41,7 +44,8 @@ upcoming_events = [
 	"date": "Nov 23, 4:00pm - 5:00pm",
 	"location": "Virtual",
 	"description": "Born in Colombia and based in New York City, Gabriel Guerrero draws his inspiration from South American rhythms and contemporary improvisation, and from the avant garde to the traditions of be-bop and jazz. He began his classical training at age five and made TV appearances at age nine. Tune in on Instagram Live, https://www.instagram.com/QPLNYC.",
-	"help_offered": ["Filling forms in English", " Korean Conversation "],
+	"help_offered": ["Filling forms in English", " Korean Conversation"],
+	"help_people": {"Filling forms in English":[{"pid": 1,"name": "Mark","available": "After Event","language": "Mandarin"}, {"pid": 2,"name": "Ann-Laure","available": "Before Event","language": "Spanish"}], " Korean Conversation": [{"pid": 3,"name": "Sophia","available": "After Event","language": "Mandarin"}]},
 	"languages_spoken": ["English", " Spanish", " Korean"],
 	}
 ]
@@ -81,7 +85,6 @@ people = [
 	}
 ]
 
-
 @app.route('/')
 def home(name=None):
 	return render_template('home.html')
@@ -101,6 +104,10 @@ def login(name=None):
 @app.route('/register')
 def register(name=None):
 	return render_template('register.html')
+
+@app.route('/submit_proposal')
+def submit_proposal(name=None):
+	return render_template('submit_proposal.html')
 
 
 if __name__ == '__main__':
