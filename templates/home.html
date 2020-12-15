@@ -8,42 +8,6 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 		<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-		<style>
-			body {
-				padding: 30px;
-			}
-			.container {
-				margin-top: 100px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="header">
-			<h1>Queens Public Library</h1>
-			<h2>Culture Bridge Platform</h2>
-		</div>
-		<div class="container">
-			<div class="row justify-content-center">
-				<h3>Welcome to the Culture Bridge Platform!</h3>
-				<h4>We offer ways to connect people to their community and share their culture</h4>
-			</div>
-			<div class="row justify-content-center" id="attend-event">
-
-			</div>
-		</div>
-	</body>
-</html>
-<!DOCTYPE html>
-<html>
-	<head>
-		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-		<link rel="shortcut icon" href="#" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
@@ -66,19 +30,28 @@
 				float: right;
 			}
 			button {
-				padding: 0;
-				border: none;
+				padding: 0px;
+				margin-right: 4px;
+				border: 1px;
+				border-style: solid;
 				background: none;
 				font-family:'Roboto Condensed', sans-serif;
 				background-color: #422a80;
 				color: white;
+				width: 100px;
+				font-size: 15px;
+				border-radius: 20px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			button:hover {
+				background-color: white;
+				color: #422a80;
 			}
 			#info {
-				background-color: #e0d4e4;
 				padding: 50px;
 				text-align: center;
 				font-family: 'Libre Franklin', sans-serif;
-				margin-bottom: 80px;
 			}
 			.welcome {
 				margin-top: 40px;
@@ -100,44 +73,55 @@
 				height: 80px;
 				text-transform: uppercase;
 			}
-			.link {
+			a {
 				color: #422a80;
 				font-weight: bold;
 				font-family:'Libre Franklin', sans-serif; 
 			}
+			a:hover {
+				color: #613ac2;
+			}
 			#contact-us {
 				margin-top: 50px;
+			}
+			img {
+				max-height: 400px;
+			}
+			.ready {
+				font-family:'Libre Franklin', sans-serif;
+				font-weight: bold;
+				color: #adadad;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="header">
 			<img src="https://www.queenslibrary.org/themes/renovate/logo.svg" alt="Queens Public Library">
-			<h4 class="cbp">Culture Bridge Platform</h4>
+			<h3 class="cbp">Culture Buddies</h3>
 		</div>
-		<div class="login-btn" id="log-in">
-
-		</div>
+		<div class="login-btn" id="log-in"></div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<h3 class="welcome">Welcome!</h3>
+				<h3 class="welcome">Welcome to Culture Buddies!</h3>
+			</div>
+			<div class="row justify-content-center">
+				<img class="img-fluid" src="{{url_for('static', filename='graphic.png')}}" alt="Illustration of how Culture Buddies works">
 			</div>
 			<div class="row justify-content-center" id="info">
-				<p>We would like to foster inter-community help and well-being by offering you the possibility of both seeking language help and attending cultural events.</p>
-				<i class="fas fa-chevron-down" data-toggle="collapse" data-target=#more id="see-more"></i>
-
-			  	<div id="more" class="collapse">
-				    You will be able to consult cultural events occurring around your area. You will notice that the description for each event not only includes practical event details but also will show members of the community who have volunteered their time and expertise to help with a particular language service. If you see an event and/or language service that you like, feel free to register!
-			  	</div>
+				<p>Through this program, you can <b>find a buddy</b> at <b>cultural events</b> at the Queens Public Library to help you with anything language-related, or you can <b>volunteer to become a buddy</b> to help members of your community with language-related tasks!</p>
+			</div>
+			<div class="row justify-content-center ready">
+				<p>Ready to start?</p>
 			</div>
 			<div class="row justify-content-center" id="attend-event">
-				
 			</div>
-			<div class="row justify-content-center" id="see-events">
-				If you'd like to see the events offered by the community, click here!
+			<br>
+			<div class="row justify-content-center ready">
+				<p>and see what you can get from and offer to your community!</p>
 			</div>
+			<br>
 			<div class="row justify-content-center" id="contact-us">
-				Do you want to volunteer, teach, or perform at our events? <span class="link"> Contact us</span>
+				<p>Do you want to volunteer, teach, or perform at our events? <a href="https://www.queenslibrary.org/about-us/contact-us"> Contact us</a></p>
 			</div>
 		</div>
 	</body>
